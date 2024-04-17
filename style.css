@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+
+:root {
+    --Softorange: hsl(35, 77%, 62%);
+    --Softred: hsl(5, 85%, 63%);
+    --Offwhite: hsl(36, 100%, 99%);
+    --Grayishblue: hsl(233, 8%, 79%);
+    --Darkgrayishblue: hsl(236, 13%, 42%);
+    --Verydarkblue: hsl(240, 100%, 5%);
+
+}
+
+.mobile {
+    display:none
+}
+
+
+nav {
+    display :flex;
+    align-items :center;
+    justify-content: space-between;
+    padding:0 10px;
+    height:100px;
+
+}
+
+nav a {
+    margin-left:20px;
+    color : var(--Darkgrayishblue)
+
+}
+
+
+.hero-content {
+    padding : 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.picture-container {
+    width :665px
+}
+
+.picture-container img:nth-child(1) {
+    width:100%
+}
+
+
+
+.picture-container img:nth-child(2) {
+    display: none;
+}
+
+.picture-container_text {
+    display :flex;
+    justify-content: space-between;
+    margin-top:40px;
+    
+}
+
+.picture-container_text h1 {
+    font-weight: 800;
+    font-size:40px;
+    width:270px;
+}
+
+.picture-container_text div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:320px;
+}
+
+.picture-container_text p, .text-container p, .inner-card p{
+    font-size : 15px;
+    color: var(--Grayishblue);
+}
+
+.picture-container_text div button {
+    background-color : var(--Softred);
+    color:var(--Offwhite);
+    width:150px;
+    height:40px;
+    border : none;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+
+.text-container {
+    background-color : var(--Verydarkblue);
+    color:var(--Offwhite);
+    width :300px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+/* .text-container h4 {
+    margin:10px 0
+} */
+
+.text-container div {
+    color:var(--Offwhite);
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding : 20px 0
+
+
+}
+
+.text-container h1 {
+    color : var(--Softorange);
+}
+
+hr {
+    border : 0.2px solid;
+    color : var(--Darkgrayishblue);
+
+}
+
+.card-container{
+    display: flex;
+    margin-top:40px;
+    padding:10px;
+    justify-content: space-between;
+}
+
+
+.inner-card {
+    display: flex;
+    gap:15px;
+    width:300px;
+   
+
+}
+
+.inner-card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.inner-card img {
+    height: 140px
+}
+
+.inner-card div h1 {
+    color : var(--Grayishblue);
+    font-weight:800;
+}
+
+.inner-card div h5 {
+    font-size: 14px;
+}
+
+
+@media (max-width:992px) {
+    nav div {
+        display : none;
+    }
+
+    .picture-container {
+        width :100%;
+        
+    }
+
+    .picture-container img:nth-child(1) {
+        display:  none;
+    }
+
+    .picture-container img:nth-child(2) {
+        display:  block;
+        width:100%;
+    }
+   
+
+    .hero-content {
+        display: block;
+    }
+
+
+    .picture-container_text {
+       display: block;
+        
+    }
+
+
+    .picture-container_text h1 {
+        font-size:44px;
+        width:100%;
+        margin-bottom:20px;
+       
+        
+    }
+
+    .picture-container_text div {
+        width:100%;
+    }
+    
+
+    .picture-container_text button {
+        margin-top:20px;
+    }
+
+    .text-container{
+        margin-top:40px;
+        width:100%
+    }
+
+
+    .card-container{
+        display:block
+    }
+
+    .inner-card {
+        margin-bottom:20px;
+        width:100%;
+    }
+
+}
+
+
+ /* Tablet only */
+@media (min-width: 768px) and (max-width: 990px){
+    nav div {
+        display : block;
+    }
+
+    .picture-container img:nth-child(2) {
+        height:450px;
+        object-fit : cover;
+    }
+
+    .picture-container_text {
+        display: flex;
+    }
+
+    .picture-container_text h1 {
+        font-size: 45px;
+        width:45%;
+    }
+   
+
+    .picture-container_text div{
+        font-size: 45px;
+        width:45%;
+    }
+}
